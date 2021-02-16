@@ -36,11 +36,7 @@ Desktop: 1440px
 ### Body Copy
 
 - Font size (Overview Card Headings): 14px
-
-### Font
-
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 700 */
+*/
 
 
 :root {
@@ -51,36 +47,111 @@ Desktop: 1440px
 
     --limeGreen: hsl(163, 72%, 41%);
     --brightRed: hsl(356, 69%, 56%);
+
+    /* Light */
+    --lightGrayishBlue: hsl(227, 47%, 96%); 
 }
 
-.card-block {
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card {
-    padding: 2rem;
+
+main {
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+}
+
+.header {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+.card {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightGrayishBlue);
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
 }
 
 .card-overview {
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    background-color: var(--lightGrayishBlue);
 }
 .card-overview-block {
     display: flex;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
 }
 
 .positive-result {
     color: var(--limeGreen);
+    font-weight: bold;
+    font-size: .8rem;
 }
+/* .positive-result::before {
+    content: 
+} */
 .negative-result {
     color: var(--brightRed);
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.large {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.text-transform {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 img {
     max-width: 20px;
+}
+
+.facebook {
+    border-top: 4px solid var(--facebook);
+}
+.twitter {
+    border-top: 4px solid var(--twitter);
+}
+.instagram {
+    border-top: 4px solid var(--instagram);
+}
+.youtube {
+    border-top: 4px solid var(--youtube);
 }

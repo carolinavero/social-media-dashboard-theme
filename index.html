@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   
@@ -14,59 +17,64 @@
 <body>
 
   <main>
-    <div>
+    <div class="header">
       <h1>
         Social Media Dashboard
       </h1>
-      <p>
+      <span>
         Total Followers: 23,004
-      </p>
+      </span>
+      <div>
+        Dark Mode
+      </div>
     </div>
 
-    <div>
-      Dark Mode
-    </div>
 
     <div class="card-block">
 
-      <div class="card">
-        <div>
+      <div class="card facebook">
+        <div class="user-info">
           <img src="images/icon-facebook.svg" alt="facebook">
           @nathanf
         </div>
-        1987
-        Followers
-        12 Today
+        <div class="large">1987</div>
+        <div class="text-transform ">Followers</div>
+        <div class="positive-result">12 Today</div>
       </div>
   
-      <div class="card">
+      <div class="card twitter">
         <div>
           <img src="images/icon-twitter.svg" alt="twitter">
             @nathanf
         </div>
-          1044
-          Followers
-          99 Today
+        
+          <div class="large">1044</div>
+        <div class="text-transform ">Followers</div>
+        <div class="positive-result">99 Today</div>      
       </div>
   
-      <div class="card">
+      <div class="card instagram">
         <div>
           <img src="images/icon-instagram.svg" alt="instagram">
           @realnathanf
         </div>
-        11k
-        Followers
-        1099 Today
+
+        <div class="large">11k</div>
+        <div class="text-transform ">Followers</div>
+        <div class="positive-result">1099 Today</div> 
+
       </div>
   
-      <div class="card">
+      <div class="card youtube">
         <div>
           <img src="images/icon-youtube.svg" alt="youtube">
           Nathan F.
         </div>
-        8239
-        Subscribers
-        144 Today
+
+        <div class="large">8239</div>
+        <div class="text-transform ">Subscribers</div>
+        <div class="positive-result">144 Today</div> 
+
       </div>
     </div>
 
