@@ -2,86 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Social Media Dashboard</title>
+  
 </head>
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <main>
+    <div>
+      <h1>
+        Social Media Dashboard
+      </h1>
+      <p>
+        Total Followers: 23,004
+      </p>
+    </div>
 
-  Dark Mode
+    <div>
+      Dark Mode
+    </div>
 
+    <div class="card-block">
+
+      <div class="card">
+        <div>
+          <img src="images/icon-facebook.svg" alt="facebook">
+          @nathanf
+        </div>
+        1987
+        Followers
+        12 Today
+      </div>
   
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
+      <div class="card">
+        <div>
+          <img src="images/icon-twitter.svg" alt="twitter">
+            @nathanf
+        </div>
+          1044
+          Followers
+          99 Today
+      </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="card">
+        <div>
+          <img src="images/icon-instagram.svg" alt="instagram">
+          @realnathanf
+        </div>
+        11k
+        Followers
+        1099 Today
+      </div>
+  
+      <div class="card">
+        <div>
+          <img src="images/icon-youtube.svg" alt="youtube">
+          Nathan F.
+        </div>
+        8239
+        Subscribers
+        144 Today
+      </div>
+    </div>
+
+
+    <h2>
+      Overview - Today
+    </h2>
+
+    <div class="card-overview-block">
+
+      <div class="card-overview">
+        Page Views
+        <img src="images/icon-facebook.svg" alt="facebook">
+        87
+        3%
+      </div>
+      <div class="card-overview">
+        Likes
+        <img src="images/icon-facebook.svg" alt="facebook">
+        52
+        2%
+      </div>
+      <div class="card-overview">
+  
+        Likes
+        <img src="images/icon-instagram.svg" alt="instagram">
+        5462
+        2257%
+      </div>
+      <div class="card-overview">
+  
+        Profile Views
+        <img src="images/icon-instagram.svg" alt="instagram">
+        52k
+        1375%
+      </div>
+      <div class="card-overview">
+  
+        Retweets
+        <img src="images/icon-twitter.svg" alt="twitter">
+        117
+        303%
+      </div>
+      <div class="card-overview">
+        Likes
+        <img src="images/icon-twitter.svg" alt="twitter">
+        507
+        553%
+      </div>
+      <div class="card-overview">
+        Likes
+        <img src="images/icon-youtube.svg" alt="youtube">
+        107
+        <span class="negative-result">19%</span>
+      </div>
+      <div class="card-overview">
+       Total Views
+       <img src="images/icon-youtube.svg" alt="youtube">
+       
+        1407
+        <span class="negative-result">12%</span>
+      </div>
+
+    </div>
+
+    
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
