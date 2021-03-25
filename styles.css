@@ -15,26 +15,23 @@ Desktop: 1440px
     /* Light */
     --lightGrayishBlue: hsl(227, 47%, 96%); 
 
+    /* Dark Theme */
+    --dark-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
 
-/* Dark Theme */
---dark-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --veryDarkBlueBg: hsl(232, 19%, 15%); /* (Top BG Pattern)*/
+    --veryDarkBlue: hsl(230, 17%, 14%); /* (BG)*/
+    --darkDesaturatedBlue: hsl(228, 28%, 20%); /*  (Card BG) */
+    --desaturatedBlue: hsl(228, 34%, 66%); /* (Text)*/
+    --white: hsl(0, 0%, 100%); /* (Text) */
 
+    /* Light Theme */
 
---veryDarkBlueBg: hsl(232, 19%, 15%); /* (Top BG Pattern)*/
---veryDarkBlue: hsl(230, 17%, 14%); /* (BG)*/
---darkDesaturatedBlue: hsl(228, 28%, 20%); /*  (Card BG) */
---desaturatedBlue: hsl(228, 34%, 66%); /* (Text)*/
---white: hsl(0, 0%, 100%); /* (Text) */
+    --light-toggle: hsl(230, 22%, 74%);
 
-/* Light Theme */
-
---light-toggle: hsl(230, 22%, 74%);
-
---VeryPaleBlue: hsl(225, 100%, 98%); /* (Top BG Pattern) */
---LightGrayishBlue: hsl(227, 47%, 96%); /* (Card BG) */ 
---DarkGrayishBlue: hsl(228, 12%, 44%); /* (Text)*/
---VeryDarkBlue: hsl(230, 17%, 14%); /*(Text) */
-
+    --VeryPaleBlue: hsl(225, 100%, 98%); /* (Top BG Pattern) */
+    --LightGrayishBlue: hsl(227, 47%, 96%); /* (Card BG) */ 
+    --DarkGrayishBlue: hsl(228, 12%, 44%); /* (Text)*/
+    --VeryDarkBlue: hsl(230, 17%, 14%); /*(Text) */
 
 }
 
@@ -60,22 +57,40 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 header span {
     color: var(--DarkGrayishBlue);
     font-weight: bold;
 }
+.mr-2 {
+    margin-right: .5rem;
+}
 
 h1 {
     margin-bottom: 0;
 }
+
+h2 {
+    color: var(--DarkGrayishBlue);
+}
+
+.medium {
+    font-size: 2rem;
+    color: var(--VeryDarkBlue);
+}
 .toggle {
     color: var(--light-toggle);
+}
+
+.subtitle {
+    font-weight: bold;
+    color: var(--DarkGrayishBlue);
 }
 .card-block {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 30px;
     width: 100%;
 }
 .card {
@@ -86,25 +101,39 @@ h1 {
     border-radius: 5px;
     text-align: center;
     width: 100%;
-}
 
+    justify-content: space-between;
+}
+.card__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
 .card-overview {
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: var(--lightGrayishBlue);
+    min-height: 100px;
+    border-radius: .5rem;
 }
 
 .card-default {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+
+    color: var(--DarkGrayishBlue);
+    font-weight: bold;
 }
 .card-overview-block {
     display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 30px;
     width: 100%;
 }
 
@@ -153,8 +182,12 @@ img {
     border-top: 4px solid var(--twitter);
 }
 .instagram {
-    border-top: 4px solid var(--instagram);
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
+
 .youtube {
     border-top: 4px solid var(--youtube);
 }
