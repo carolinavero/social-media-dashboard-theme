@@ -2,7 +2,6 @@
 Desktop: 1440px
 */
 
-
 :root {
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
@@ -33,6 +32,8 @@ Desktop: 1440px
     --DarkGrayishBlue: hsl(228, 12%, 44%); /* (Text)*/
     --VeryDarkBlue: hsl(230, 17%, 14%); /*(Text) */
 
+    --hover-card: hsl(232, 33%, 91%);
+
 }
 
 * {
@@ -49,7 +50,6 @@ body {
     justify-content: center;
     color: var(--veryDarkBlue);
 }
-
 main {
     display: flex;
     flex-direction: column;
@@ -60,7 +60,6 @@ main {
 .container {
     width: 1200px;
     margin-top: 5rem;
-
 }
 .header-bg {
     background-color: var(--VeryPaleBlue);
@@ -119,6 +118,11 @@ h2 {
     width: 100%;
 
     justify-content: space-between;
+}
+.card:hover,
+.card-overview:hover {
+    cursor: pointer;
+    background-color: var(--hover-card);
 }
 .card__user {
     display: flex;
@@ -243,6 +247,10 @@ img {
   border-radius: 34px;
 }
 
+.slider:hover {
+    background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
 .slider:before {
     position: absolute;
     content: "";
@@ -257,8 +265,8 @@ img {
 }
 
 input:checked + .slider {
-    background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     background-color: var(--light-toggle);
+    /* background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%)); */
 }
 
 input:focus + .slider {
