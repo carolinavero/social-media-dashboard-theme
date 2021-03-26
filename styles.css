@@ -35,6 +35,12 @@ Desktop: 1440px
 
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -50,6 +56,7 @@ main {
     justify-content: center;
     width: 100%;
     max-width: 1440px;
+    padding: 30px;
 }
 
 .header {
@@ -73,14 +80,12 @@ h1 {
 
 h2 {
     color: var(--DarkGrayishBlue);
+    margin: 4rem 0 2rem;
 }
 
 .medium {
     font-size: 2rem;
     color: var(--VeryDarkBlue);
-}
-.toggle {
-    color: var(--light-toggle);
 }
 
 .subtitle {
@@ -117,7 +122,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--lightGrayishBlue);
-    min-height: 100px;
+    min-height: 150px;
     border-radius: .5rem;
 }
 
@@ -190,4 +195,77 @@ img {
 
 .youtube {
     border-top: 4px solid var(--youtube);
+}
+
+
+.toggle-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--DarkGrayishBlue);
+    font-weight: bold;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+  margin-left: 15px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-toggle);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    background-color: var(--light-toggle);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px  var(--light-toggle);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+@media(max-width: 600px) {
+    .card-block{
+        grid-template-columns:  auto;
+    }
+    .card-overview-block {
+        grid-template-columns:  auto;
+    }
 }
