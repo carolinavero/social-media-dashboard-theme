@@ -54,11 +54,22 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 1440px;
-    padding: 30px;
 }
+.container {
+    width: 1200px;
+    margin-top: 5rem;
 
+}
+.header-bg {
+    background-color: var(--VeryPaleBlue);
+    height: 30vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
 .header {
     text-align: left;
     display: flex;
@@ -261,7 +272,7 @@ input:checked + .slider:before {
 }
 
 
-@media(max-width: 600px) {
+@media(max-width: 800px) {
     .card-block{
         grid-template-columns:  auto;
     }
