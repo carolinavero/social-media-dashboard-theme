@@ -102,11 +102,17 @@ h2 {
     font-weight: bold;
     color: var(--DarkGrayishBlue);
 }
+
 .card-block {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      
+
+    /* gap: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    width: 100%;
+    width: 100%; */
 }
 .card {
     padding: 1rem 0;
@@ -195,6 +201,42 @@ img {
     max-width: 20px;
 }
 
+.loading-block {
+    background-color: #000000e1;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+.loading {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.loading:after {
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 80px;
+    /* margin: 8px; */
+    border-radius: 50%;
+    border: 6px solid rgb(47, 134, 206);
+    border-color: #fff transparent #fff transparent;
+    animation: loading 1.2s linear infinite;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .facebook {
     border-top: 4px solid var(--facebook);
 }
@@ -281,9 +323,9 @@ input:checked + .slider:before {
 
 
 @media(max-width: 800px) {
-    .card-block{
+    /* .card-block{
         grid-template-columns:  auto;
-    }
+    } */
     .card-overview-block {
         grid-template-columns:  auto;
     }
