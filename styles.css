@@ -122,6 +122,11 @@ h2 {
     justify-content: space-between;
     transition: all .5s ease-in;
 }
+.card span {
+    font-weight: 400;
+    font-size: .8rem;
+    color: var(--darkGrayishBlue);
+}
 .card:hover,
 .card-overview:hover {
     cursor: pointer;
@@ -350,6 +355,7 @@ input:checked + .slider:before {
 .dark-mode .card-overview:hover {
     background-color: hsl(228deg 26% 27%);
 }
+.dark-mode .card span,
 .dark-mode .card-default,
 .dark-mode .subtitle,
 .dark-mode .toggle-block {
