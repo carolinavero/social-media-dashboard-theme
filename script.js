@@ -1,4 +1,6 @@
 let loading = document.querySelector('.loading-block');
+let toggleMode = document.querySelector('#switch');
+let page = document.querySelector('main');
 
 function hideLoading () {
     console.log('DOM loaded')
@@ -11,3 +13,8 @@ if(document.readyState === 'loading') {
 } else {
     hideLoading();
 }
+
+toggleMode.addEventListener('click', () => {
+    console.log("clicou")
+    page.classList.toggle('dark-mode');
+})
