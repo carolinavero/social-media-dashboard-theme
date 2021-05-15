@@ -165,16 +165,25 @@ h2 {
     color: var(--limeGreen);
     font-weight: 700;
     font-size: .8rem;
+    text-align: center;
 }
-/* .positive-result::before {
-    content: 
-} */
+.positive-result::before {
+    content: url(images/icon-up.svg);
+    position: relative;
+    top: -2px;
+    left: -5px;
+} 
 .negative-result {
     color: var(--brightRed);
     font-weight: 700;
     font-size: .8rem;
 }
-
+.negative-result::before {
+    content: url(images/icon-down.svg);
+    position: relative;
+    top: -2px;
+    left: -5px;
+} 
 .user-info {
     display: flex;
     align-items: center;
@@ -351,11 +360,10 @@ input:checked + .slider:before {
 }
 
 @media(max-width: 800px) {
-    body {
-        padding: 0 30px 30px;
-    }
+   
     main {
         height: auto;
+        padding: 0 30px 30px;
     }
     .container {
         width: 100%;
