@@ -15,6 +15,5 @@ if(document.readyState === 'loading') {
 }
 
 toggleMode.addEventListener('click', () => {
-    console.log("clicou")
     page.classList.toggle('dark-mode');
 })
